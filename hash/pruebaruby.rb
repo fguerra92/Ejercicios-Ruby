@@ -14,21 +14,22 @@ def request(url, api)
 end
 
 #photos = request("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1", api_key)['photos']
-photos = request("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=", api_key)['photos']
+#photos = request("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1", api_key)['photos']
+photos = request("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&", api_key)['photos']
 photos_url = photos.map { |photo| photo["img_src"] }
 
 def build_web_page(photos)
     html = "<html> \n"
-    html += "<head> \n"
-    html += "</head> \n"
-    html += "<body> \n"
-    html += "<ul> \n"
+    html += "\t<head> \n"
+    html += "\t</head> \n"
+    html += "\t<body> \n"
+    html += "\t<ul> \n"
 
     photos.each do |photo|
-    html += "\t <li><img src='#{photo}'></li> \n"
+    html += "\t\t <li><img src='#{photo}'></li> \n"
 end
-    html += "</ul> \n"
-    html += "</body> \n"
+    html += "\t</ul> \n"
+    html += "\t</body> \n"
     html += "</html> \n"
 
 File.write('output.html', html)
