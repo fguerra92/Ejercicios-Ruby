@@ -1,5 +1,5 @@
 variables = [180, 50, 5000, 30, 90, 100, 200, 0, 500]
-# => ["mal", "bien", "mal", "bien", "bien", "bien", "mal", "b
+
 
 def scan_addicts2(arr)
 
