@@ -1,4 +1,4 @@
-precios = [ 1200, 1450, 4580, 5590, 6050, 9784]
+precios = [ 1200, 1450, 4580, 5590, 6050, 9400]
 porcentaje = [1.2] #aumento
 
 def augment(precios, porcentaje)
